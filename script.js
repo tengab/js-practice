@@ -80,7 +80,7 @@ var b = 6;
 var c = 0;
 
 
-var delta = b*b - 4*a*c
+var delta = b * b - 4 * a * c
 console.log(delta);
 var typeOfDelta = delta > 0 ?
     'wiekszy od 0'
@@ -99,7 +99,7 @@ var numberOfEquals = delta > 0 ?
         'nie posiada rozwiazan';
 console.log(numberOfEquals);
 
-var zeroPlaces = function(i) {
+var zeroPlaces = function (i) {
     var i = delta > 0 ?
         [((-b + Math.sqrt(delta)) / (a * 2)), ((-b - Math.sqrt(delta)) / (a * 2))]
         :
@@ -108,26 +108,26 @@ var zeroPlaces = function(i) {
             :
             'brak miejsc zerowych';
     return i;
-console.log(i);
+    console.log(i);
 }
 zeroPlaces(1)
 
 
-
-
-function sampleFunction(a, b, c){
-    var delta = b*b - 4*a*c
-    var typeOfDelta = delta > 0 ?
-        ['wiekszy od 0', 'posiada 2 rozwiazania',((-b + Math.sqrt(delta)) / (a * 2)), ((-b - Math.sqrt(delta)) / (a * 2))]
+function sampleFunction(a, b, c) {
+    var delta = b * b - 4 * a * c
+    var typeOfDelta = delta > 0 ? ['wiekszy od 0', 'posiada 2 rozwiazania',
+            [((-b + Math.sqrt(delta)) / (a * 2))+' ', ((-b - Math.sqrt(delta)) / (a * 2))]]
         :
         delta === 0 ?
             ['rowny 0', 'posiada jedno rozwiazanie', (-b / (a * 2))]
             :
-            ['mniejszy','nie posiada rozwiazan','brak miejsc zerowych'];
-    return typeOfDelta;
+            ['mniejszy', 'nie posiada rozwiazan', 'nie jest styczna do osi odciętych'];
+    return 'Ponieważ wyroznik trojmianu kwadratowego jest ' + typeOfDelta[0] + ', funkcja ' + typeOfDelta[1] +
+        ' czyli ' + typeOfDelta[2] + '.';
 
 }
-console.log(sampleFunction(-5, 6, -2))
+
+console.log(sampleFunction(2, -4, 2))
 
 /*
 console.log('Poniewaz wyroznik trojmianu kwadratowego jest ' + typeOfDelta + ', funkcja ' + numberOfEquals +
