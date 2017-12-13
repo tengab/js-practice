@@ -1,27 +1,19 @@
-var celciusDegrees = 10
-
-function convertCelciustoFahrenheit(){
-    var counter = Math.round(celciusDegrees*9/5 + 32);
-    console.log('Dzis jest ' + celciusDegrees +' stopi Celsjusza, czyli ' + counter.toString() +
+/*function convertCelciustoFahrenheit(a){
+    var counter = Math.round(a*9/5 + 32);
+    return ('Dzis jest ' + a +' stopi Celsjusza, czyli ' + counter.toString() +
         ' stopni Farenhajta')
-
 }
-convertCelciustoFahrenheit();
+console.log(convertCelciustoFahrenheit(20));
 
 
-var randomArray = (Math.round(Math.random()*10)+1)*4;
-
+var randomArray = (Math.round(Math.random()*10)*4)+1;
 console.log(randomArray)
-
 var loopedRandomArray = [];
-
 for(var i = 0; i < randomArray; i++){
     loopedRandomArray[i] = 'Object ' + i;
 }
-console.log(loopedRandomArray);
-var halfArray = loopedRandomArray.length / 2;
-console.log(halfArray);
-var result = loopedRandomArray.slice(halfArray-2, halfArray+2);
+var halfArray = (loopedRandomArray.length)/2;
+var result = loopedRandomArray.slice(halfArray-2, halfArray+3);
 console.log(result);
 
 
@@ -112,7 +104,7 @@ var zeroPlaces = function (i) {
 }
 zeroPlaces(1)
 
-*/
+
 function sampleFunction(a, b, c) {
     var delta = b*b - 4 * a * c
     var typeOfDelta = delta > 0 ? ['wiekszy od 0', 'posiada 2 rozwiazania',
@@ -130,3 +122,18 @@ console.log(sampleFunction(-1, 3, 4))
 console.log(sampleFunction(2, -4, 2))
 console.log(sampleFunction(-5, 6, -2))
 
+
+function confitmation() {
+
+    if ((confirm('would you like to answer my question?')) == '') {
+        alert('Come back!')
+    } else {
+        while ((prompt('What is your name?')) === '') {
+            alert('Please type your name')
+        }
+    }
+}
+
+confitmation();
+
+*/
